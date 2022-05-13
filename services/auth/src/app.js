@@ -8,7 +8,9 @@ app.get('/', (req, res) => {
 
 app.get('/auth', (req, res) => {
     console.log("Hitting auth endpoint");
-    res.sendStatus(401);
+    console.log(JSON.stringify(req.headers));
+    res.header('clientId', 'some client id');
+    res.sendStatus(200);
 })
 
 app.listen(port, () => {

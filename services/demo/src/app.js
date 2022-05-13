@@ -4,6 +4,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.send('I am demo service')
+  console.log(JSON.stringify(req.headers));
 })
 
 app.listen(port, () => {
