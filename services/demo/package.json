@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/app.js",
-    "docker-build": "DOCKER_BUILDKIT=1 docker build -f Dockerfile ../.. -t demo-service/latest"
+    "docker-build": "DOCKER_BUILDKIT=1 docker build -f Dockerfile ../.. -t demo-service:latest"
   },
   "author": "",
   "license": "ISC",
