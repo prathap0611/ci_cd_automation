@@ -4,9 +4,10 @@ ENV INSTALL_PATH /usr/src/app
 WORKDIR $INSTALL_PATH
 
 COPY package* .
-COPY ./services/auth ./
-
+COPY ./services/auth/package.json ./services/auth/package.json
 RUN npm ci
+
+COPY ./services/auth ./
 
 EXPOSE 3001
 ENTRYPOINT [ "node", "src/app.js" ]
